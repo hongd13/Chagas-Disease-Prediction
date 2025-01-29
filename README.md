@@ -13,3 +13,8 @@ The initial inspection of the dataset shows that the dataset consists of 10 info
 |-------------|-------------|-----|
 | Class 1     | 809         |1|
 | Class -1    | 48,797      |60|
+
+<p align="center">
+  <img src="https://github.com/hongd13/Chagas-Disease-Prediction/blob/master/pictures/class_distribution.png?raw=true"/>
+</p>
+
