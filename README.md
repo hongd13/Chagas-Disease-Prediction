@@ -12,19 +12,13 @@ The initial inspection of the dataset shows that the dataset consists of 10 info
 
 <div align="center">
 
-|ID |Info_PepID	|Info_organism_id	|Info_protein_id	|Info_pos	|Info_AA	|Info_epitope_id	|Info_nPos	|Info_nNeg	|Info_cluster	|Class	|feat_esm1b_0|...|feat_esm1b_1280|
-|-| -	|-	|-	|-	|-	|-	|-	|-	|-	|-	|-	|-|-|
-|0	|XP_809948.1:15	|5693	|XP_809948.1	|218	|E	|276453	|1	|0	|18	|1	|	0.294185 |... |0.571763|
-|...|...|...|...|...|...|...|...|...|...|...|...|...|
-|49605	|XP_814147.1:10	|5693	|XP_814147.1	|190	|E	|309252	|0	|1	|70 |-1 | 0.097965 |...	| 0.237317|
-
-</div>
-
-<p align="center">
+  |ID |Info_PepID	|Info_organism_id	|Info_protein_id	|Info_pos	|Info_AA	|Info_epitope_id	|Info_nPos	|Info_nNeg	|Info_cluster	|Class	|feat_esm1b_0|...|feat_esm1b_1280|
+  |-| -	|-	|-	|-	|-	|-	|-	|-	|-	|-	|-	|-|-|
+  |0	|XP_809948.1:15	|5693	|XP_809948.1	|218	|E	|276453	|1	|0	|18	|1	|	0.294185 |... |0.571763|
+  |...|...|...|...|...|...|...|...|...|...|...|...|...|
+  |49605	|XP_814147.1:10	|5693	|XP_814147.1	|190	|E	|309252	|0	|1	|70 |-1 | 0.097965 |...	| 0.237317|
+  
   <img src="https://github.com/hongd13/Chagas-Disease-Prediction/blob/master/pictures/class_distribution.png?raw=true"/>
-</p>
-
-<div align="center">
   
   | Class       | Total Count |Ratio|
   |-------------|-------------|-----|
@@ -33,5 +27,11 @@ The initial inspection of the dataset shows that the dataset consists of 10 info
 
 </div>
 
-By studying the dataset manual, we learn that entries need to be 
+The dataset manual specifies that entries sharing the same **Info_cluster** label should be grouped during train-test split and cross-validation processes. Analysing the population and class distribution of each Info_cluster label reveals an imbalance; some clusters are solely composed of class -1 entries, while others feature an excessive number of class 1 entries, and some clusters contain significantly more entries than the other. These characteristics introduce 
+
+<div align="center">
+  
+  <img src="https://github.com/hongd13/Chagas-Disease-Prediction/blob/master/pictures/info_cluster_population.png?raw=true"/>
+  
+</div>
 
