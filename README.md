@@ -27,11 +27,45 @@ The initial inspection of the dataset shows that the dataset consists of 10 info
 
 </div>
 
-The dataset manual specifies that entries sharing the same **Info_cluster** label should be grouped during train-test split and cross-validation processes. Analysing the population and class distribution of each Info_cluster label reveals an imbalance; some clusters are solely composed of class -1 entries, while others feature an excessive number of class 1 entries, and some clusters contain significantly more entries than the other. These characteristics introduce 
+### Dataset splitting with Info_cluster
+
+The dataset manual specifies that entries sharing the same **Info_cluster** label should be grouped during the train-test split and cross-validation processes. Analysing the population and class distribution of each Info_cluster label reveals an imbalance; some clusters are solely composed of class -1 entries, while others feature an excessive number of class 1 entries, and some contain significantly more entries than others. These characteristics and constraints introduce difficulties and complexities that need to be addressed when performing any form of dataset-splitting operations.  
 
 <div align="center">
   
   <img src="https://github.com/hongd13/Chagas-Disease-Prediction/blob/master/pictures/info_cluster_population.png?raw=true"/>
   
 </div>
+
+### Missing values
+
+Upon checking for missing values, we see that **`feat_esm1b_148`** is missing in almost all entries (44655 entries) while counts of missing values for every other feature appear to be rather consistent, all ranging from 75 to 88, as shown below. 
+
+<div align="center">
+
+  ||Counts of NaN|
+  |-|-|
+  |feat_esm1b_148|44655|
+  |feat_esm1b_646|88|
+  |...|...|
+  |feat_esm1b_257|75|
+  |...|...|
+  |Class|0|
+  
+</div>
+
+In further investigation, it appears that there is no clear correlation between the **`Class`** distribution and the missing **`feat_esm1b_148`** values. As shown below, roughly 90% of the observations are missing the feature, where no noteworthy correlations between the class labels were visible. Therefore, it is possible to safely dismiss this feature as redundant and remove it.
+
+<div align="center">
+
+  | Class                |   -1  |   1  |
+  |----------------------|-------|------|
+  | feat_esm1b_148_nan   |       |      |
+  | False (not missing)  |  4875 |  76  |
+  | True (missing)       | 43922 | 733  |
+  
+</div>
+
+
+
 
