@@ -1,6 +1,6 @@
 # Chagas-Disease-Prediction
 
-<i> This README file contains a comprehensive summary of the development process, results analysis, and key findings from the Jupyter Notebook. </i>
+<i> This README file contains a comprehensive summary of the development process, results analysis, and key findings from the Jupyter Notebook within the master branch. </i>
 
 ## Introduction
 This machine-learning project aims to produce a 
