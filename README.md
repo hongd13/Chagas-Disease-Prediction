@@ -18,7 +18,7 @@ The initial inspection of the dataset shows that the dataset consists of 10 info
   |...|...|...|...|...|...|...|...|...|...|...|...|...|
   |49605	|XP_814147.1:10	|5693	|XP_814147.1	|190	|E	|309252	|0	|1	|70 |-1 | 0.097965 |...	| 0.237317|
   
-  <img src="https://github.com/hongd13/Chagas-Disease-Prediction/blob/master/pictures/class_distribution.png?raw=true"/>
+  <img src="pictures/class_distribution.png?raw=true"/>
   
   | Class       | Total Count |Ratio|
   |-------------|-------------|-----|
@@ -33,7 +33,7 @@ The dataset manual specifies that entries sharing the same **Info_cluster** labe
 
 <div align="center">
   
-  <img src="https://github.com/hongd13/Chagas-Disease-Prediction/blob/master/pictures/info_cluster_population.png?raw=true"/>
+  <img src="pictures/info_cluster_population.png?raw=true"/>
   
 </div>
 
@@ -74,7 +74,7 @@ Upon inspecting the feature ranges, we see that the main body of ranges lies bet
 
 <div align="center">
   
-  <img src="https://github.com/hongd13/Chagas-Disease-Prediction/blob/master/pictures/data_ranges.png?raw=true"/>
+  <img src="pictures/data_ranges.png?raw=true"/>
   
 </div>
 
@@ -94,8 +94,8 @@ After applying 'Mutual information' on the features, results show a declining CD
 
 <div align="center">
   
-  <img src="https://github.com/hongd13/Chagas-Disease-Prediction/blob/master/pictures/mi_score_dist.png?raw=true"/>
-  <img src="https://github.com/hongd13/Chagas-Disease-Prediction/blob/master/pictures/mi_score.png?raw=true"/>
+  <img src="pictures/mi_score_dist.png?raw=true"/>
+  <img src="pictures/mi_score.png?raw=true"/>
   
 </div>
 
@@ -103,8 +103,8 @@ Then PCA was applied. Using the cumulative variance explained ratio, we can see 
 
 <div align="center">
   
-  <img src="https://github.com/hongd13/Chagas-Disease-Prediction/blob/master/pictures/evr.png?raw=true"/>
-  <img src="https://github.com/hongd13/Chagas-Disease-Prediction/blob/master/pictures/pca.png?raw=true"/>
+  <img src="pictures/evr.png?raw=true"/>
+  <img src="pictures/pca.png?raw=true"/>
   
 </div>
 
@@ -112,7 +112,7 @@ FA is then analysed. The results are rather unsatisfactory as shown below.
 
 <div align="center">
   
-  <img src="https://github.com/hongd13/Chagas-Disease-Prediction/blob/master/pictures/fa1.png?raw=true"/>
+  <img src="pictures/fa1.png?raw=true"/>
   
 </div>
 
@@ -120,7 +120,7 @@ This suggests perhaps FA is not the best option in this context. However, recall
 
 <div align="center">
   
-  <img src="https://github.com/hongd13/Chagas-Disease-Prediction/blob/master/pictures/fa2.png?raw=true"/>
+  <img src="pictures/fa2.png?raw=true"/>
   
 </div>
 
